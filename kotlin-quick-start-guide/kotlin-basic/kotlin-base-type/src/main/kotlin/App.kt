@@ -2,7 +2,9 @@ fun main(args: Array<String>) {
     // Array
     //arraySample()
     // nullable type
-    nullableTypeSample()
+    //nullableTypeSample()
+    //casting(1)
+    safeCasting(1)
 }
 
 fun arraySample() : Unit{
@@ -40,4 +42,14 @@ fun nonNullAssertion(str: String?){
 fun elvisOperator(str: String?){
     val upperCase = str?.toUpperCase() ?: ""
     println("elvisOperator: ${upperCase}")
+}
+
+fun casting(x: Any) {
+    val sum = x as Int
+    println("Cast result is ${sum}")
+}
+
+fun safeCasting(x: Any?): Unit {
+    val num: Int? = x as? Int ?: 0
+    println("Cast result is ${num}")
 }
